@@ -1,4 +1,4 @@
-package starter.test_Elements_Practice;
+package starter.ui.testElementsPractice;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;

@@ -8,10 +8,12 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import starter.navigation.NavigateTo;
 import starter.navigation.SelectElementsOption;
-import starter.test_Elements_Practice.DoTextBoxPractice;
+import starter.ui.testElementsPractice.DoTextBoxPractice;
+import starter.ui.testElementsPractice.ValidateAllData;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static net.serenitybdd.screenplay.actors.OnStage.withCurrentActor;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.*;
+import static org.hamcrest.Matchers.*;
 
 public class TextBoxStepDefinition {
 
@@ -39,6 +41,14 @@ public class TextBoxStepDefinition {
     }
     @Then("he should see the text on the web")
     public void he_should_see_the_text_on_the_web() {
-
+        theActorInTheSpotlight().should(
+                seeThat("Displayed name ", ValidateAllData.valueName(), equalTo("Name:Daniel")),
+                seeThat("Displayed email ", ValidateAllData.valueEmail(), equalTo("Email:correoprueba1@correo.com")),
+                seeThat("Displayed current address ", ValidateAllData.valueCurrentAddress(), equalTo("Current Address :cra 11 # 11 - 11")),
+                seeThat("Displayed permanent address ", ValidateAllData.valuePermanentAddress(), equalTo("Permananet Address :Sabaneta, Antioquia"))
+        );
+        /*
+        System.out.println("**** "+ ValidateAllData.valuePermanentAddress().answeredBy(theActorInTheSpotlight()));
+**/
     }
 }
