@@ -1,13 +1,14 @@
-package starter.ui.testElementsPractice;
+package starter.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import starter.userinterfaces.TextBoxPage;
 
-public class ValidateData implements Question<String> {
+public class ValidateTextBoxResult implements Question<String> {
 
     public static Question<String> value(){
-        return new ValidateData();
+        return new ValidateTextBoxResult();
     }
 
     @Override
