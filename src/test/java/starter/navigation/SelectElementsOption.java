@@ -10,14 +10,8 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectElementsOption implements Task {
 
-    private final String optionToPractice;
-
-    public SelectElementsOption(String optionToPractice) {
-        this.optionToPractice = optionToPractice;
-    }
-
-    public static Performable to_Practice(String optionToPractice){
-        return instrumented(SelectElementsOption.class, optionToPractice);
+    public static Performable onScreen(){
+        return instrumented(SelectElementsOption.class);
     }
 
     @Override

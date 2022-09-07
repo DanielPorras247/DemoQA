@@ -1,9 +1,10 @@
-package starter.ui.testElementsPractice;
+package starter.questions;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;
+import starter.userinterfaces.TextBoxPage;
 
-public class ValidateAllData {
+public class ValidateTextBoxResults {
     public static Question<String> valueName(){
         return actor -> TextContent.of(TextBoxPage.OUTPUT_NAME).viewedBy(actor).asString().trim();
     }

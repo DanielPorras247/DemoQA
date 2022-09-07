@@ -1,4 +1,4 @@
-package starter.ui.testElementsPractice;
+package starter.userinterfaces;
 
 import org.openqa.selenium.By;
 
