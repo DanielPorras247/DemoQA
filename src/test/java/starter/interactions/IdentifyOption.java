@@ -4,8 +4,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.By;
+import starter.userinterfaces.CheckBoxPage;
 import starter.userinterfaces.TextBoxPage;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -26,10 +28,9 @@ public class IdentifyOption implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(By.xpath(
-                        "//div[@class='element-group']//child::span[contains(text(),'"+option+"')]"), isVisible()).forNoMoreThan(10).seconds(),
-                Click.on(By.xpath(
-                        "//div[@class='element-group']//child::span[contains(text(),'"+option+"')]")));
+                WaitUntil.the(By.xpath("//div[@class='element-group']//child::span[contains(text(),'"+option+"')]"), isVisible()).forNoMoreThan(10).seconds(),
+                Scroll.to(By.xpath("//div[@class='element-group']//child::span[contains(text(),'"+option+"')]")),
+                Click.on(By.xpath("//div[@class='element-group']//child::span[contains(text(),'"+option+"')]")));
 
     }
 }
