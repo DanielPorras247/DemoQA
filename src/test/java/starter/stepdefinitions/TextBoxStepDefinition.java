@@ -19,13 +19,8 @@ import static org.hamcrest.Matchers.*;
 
 public class TextBoxStepDefinition {
 
-    @Before
-    public void setTheStage(){
-        OnStage.setTheStage( new OnlineCast());
-    }
-
     @Given("^(.*) wants interacting with Elements of type (.*)")
-    public void wants_interacting_with_elements_of_type_textbox(String actor, String option) {
+    public void wants_interacting_with_elements_of_type(String actor, String option) {
         theActorCalled(actor).attemptsTo(
                 NavigateTo.theDemoQAHomePage(),
                 SelectElementsOption.onScreen(),

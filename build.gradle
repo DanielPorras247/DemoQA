@@ -35,6 +35,7 @@ ext {
     lombokVersion = '1.18.16'
     javaFakerVersion = '1.0.2'
     serenityCucumberVersion = '2.4.24'
+    serenityVersion = '2.4.24'
 }
 
 dependencies {
