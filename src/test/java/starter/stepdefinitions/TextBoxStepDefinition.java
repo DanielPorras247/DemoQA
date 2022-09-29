@@ -1,15 +1,12 @@
 package starter.stepdefinitions;
 
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.hamcrest.Matcher;
 import starter.interactions.IdentifyOption;
-import starter.navigation.NavigateTo;
-import starter.navigation.SelectElementsOption;
+import starter.tasks.NavigateTo;
+import starter.tasks.SelectElementsOption;
 import starter.questions.ValidateTextBoxResults;
 import starter.tasks.DoTextBoxPractice;
 
