@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import starter.userinterfaces.TextBoxPage;
 import starter.userinterfaces.WebTablesPage;
 
 import java.util.List;

@@ -1,25 +1,15 @@
 package starter.stepdefinitions;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
-import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.actors.OnlineCast;
-import starter.interactions.IdentifyOption;
-import starter.navigation.DemoQAHomePage;
-import starter.navigation.NavigateTo;
-import starter.navigation.SelectElementsOption;
 import starter.questions.ValidateRadioButton;
 import starter.tasks.SelectRadioButton;
 
 import java.util.List;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
 
